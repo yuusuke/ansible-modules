@@ -1,0 +1,16 @@
+- hosts: all
+
+  tasks:
+
+    - name: write_out 1
+      shell: date
+
+    - name: write_out 2
+      shell: "{{item}}"
+      with_items:
+        - echo test1
+        - echo test2
+
+    - name: write_out 3
+      shell: date
+
